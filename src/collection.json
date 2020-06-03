@@ -1,0 +1,10 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "cap-angular-schematic-cloudinary": {
+      "description": "A blank schematic.",
+      "factory": "./cap-angular-schematic-cloudinary/index",
+      "schema": "./cap-angular-schematic-cloudinary/schema.json"
+    }
+  }
+}
