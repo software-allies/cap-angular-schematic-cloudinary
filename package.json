@@ -19,6 +19,6 @@
     "@types/node": "^8.0.31",
     "jasmine": "^3.0.0",
     "schematics-utilities": "^2.0.1",
-    "typescript": "~3.2.2"
+    "typescript": "^3.9.3"
   }
 }

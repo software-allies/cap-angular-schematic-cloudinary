@@ -4,16 +4,33 @@
   "title": "CAP Cloudinary Schema",
   "type": "object",
   "properties": {
-    "angular_version": {
+    "version": {
       "type": "number",
-      "description": "Angular version: ",
-      "x-prompt": "Angular version [2-5]: ",
+      "description": "Angular version",
+      "x-prompt": {
+        "message": "Which angular version do you have installed? ",
+        "type": "list",
+        "items": [
+          {
+            "value": 2,
+            "label": "Angular 2"
+          },
+          {
+            "value": 4,
+            "label": "Angular 4"
+          },
+          {
+            "value": 5,
+            "label": "Between Angular [5-9]"
+          }
+        ]
+      },
       "$default": {
         "$source": "argv",
         "index": 0
       }
     },
-    "cloud_name": {
+    "cloudName": {
       "type": "string",
       "description": "Cloud name",
       "x-prompt": "Cloudinary cloud name: ",
@@ -22,7 +39,7 @@
         "index": 1
       }
     },
-    "upload_preset": {
+    "uploadPreset": {
       "type": "string",
       "description": "Upload preset: ",
       "x-prompt": "Cloudinary upload preset: ",
@@ -31,7 +48,7 @@
         "index": 2
       }
     },
-    "private_cdn": {
+    "privateCdn": {
       "type": "string",
       "description": "Private cdn",
       "x-prompt": "Cloudinary private cdn: ",
@@ -40,7 +57,7 @@
         "index": 3
       }
     },
-    "cname": {
+    "cName": {
       "type": "string",
       "description": "cname:",
       "x-prompt": "Cloudinary cname: ",
@@ -51,10 +68,10 @@
     }
   },
   "required": [
-    "angular_version",
-    "cloud_name",
-    "upload_preset",
-    "private_cdn",
-    "cname"
+    "version",
+    "cloudName",
+    "uploadPreset",
+    "privateCdn",
+    "cName"
   ]
 }
