@@ -46,15 +46,16 @@ export function capAngularSchematicCloudinary(_options: SchemaI): Rule {
 }
 function addModuleToImports(options: SchemaI): Rule {
   return (host: Tree) => {
-    let pth: any = `${options.path}/app/app.mmodule` || '';
-    cap_utilities.appendToStartFile(host, pth, `import * as  Cloudinary from 'cloudinary-core';`)
+    options.clConfiguration = 'Cloudinary';
+    const filePath = `${options.path}/app/app.module.ts`;
+    cap_utilities.appendToStartFile(host, filePath, `import * as  Cloudinary from 'cloudinary-core';`)
     cap_utilities.addToNgModule(host, options,
       [{
         name: 'CloudinaryModule',
         path: `@cloudinary/angular-${options.version}.x`,
         type: 'module',
         forRootValues: {
-          configuration: options.clConfiguration,
+          configuration: options.clConfiguration.replace(`'`, ''),
           params: [
             {
               name: 'cloud_name',
