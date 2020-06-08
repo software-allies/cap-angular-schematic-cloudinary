@@ -11,8 +11,8 @@
 
 The Schematic modifies the app module to embed the cloudinary' setting.
 
-Inline-style: 
-![alt text]( "Cloudinary schematic")
+
+![alt text](https://github.com/software-allies/cap-angular-schematic-cloudinary/blob/development/src/assets/img/cloudinary.png?raw=true "Cloudinary schematic")
 
 Example: 
 
