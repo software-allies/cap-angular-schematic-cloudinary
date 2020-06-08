@@ -39,39 +39,62 @@
         "index": 1
       }
     },
+    "apiKey": {
+      "type": "string",
+      "description": "Cloud name",
+      "x-prompt": "Cloudinary api key: ",
+      "$default": {
+        "$source": "argv",
+        "index": 2
+      }
+    },
+    "apiSecret": {
+      "type": "string",
+      "description": "Cloud name",
+      "x-prompt": "Cloudinary api secret: ",
+      "$default": {
+        "$source": "argv",
+        "index": 3
+      }
+    },
     "uploadPreset": {
       "type": "string",
       "description": "Upload preset: ",
       "x-prompt": "Cloudinary upload preset: ",
       "$default": {
         "$source": "argv",
-        "index": 2
+        "index": 4
       }
     },
     "privateCdn": {
-      "type": "string",
+      "type": "boolean",
       "description": "Private cdn",
-      "x-prompt": "Cloudinary private cdn: ",
+      "x-prompt": {
+        "message": "Are you are an Advanced plan user with a private CDN distribution? ",
+        "type": "list",
+        "items": [
+          {
+            "value": false,
+            "label": "No"
+          },
+          {
+            "value": true,
+            "label": "Yes"
+          }
+        ]
+      },
       "$default": {
         "$source": "argv",
-        "index": 3
-      }
-    },
-    "cName": {
-      "type": "string",
-      "description": "cname:",
-      "x-prompt": "Cloudinary cname: ",
-      "$default": {
-        "$source": "argv",
-        "index": 4
+        "index": 5
       }
     }
   },
   "required": [
     "version",
     "cloudName",
+    "apiKey",
+    "apiSecret",
     "uploadPreset",
-    "privateCdn",
-    "cName"
+    "privateCdn"
   ]
 }

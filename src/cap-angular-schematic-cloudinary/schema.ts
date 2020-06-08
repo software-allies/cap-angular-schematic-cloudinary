@@ -1,9 +1,10 @@
 export default interface SchemaI {
   version: number,
   cloudName: string;
-  uploadPreset: string;
-  privateCdn: string;
-  cName: string;
+  apiKey: string;
+  apiSecret: string;
+  uploadPreset?: string;
+  privateCdn?: boolean;
   name?: string;
   path?: string;
   module?: any;

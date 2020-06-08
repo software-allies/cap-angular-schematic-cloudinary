@@ -44,6 +44,7 @@ export function installPackageJsonDependencies(): Rule {
 export function capAngularSchematicCloudinary(_options: SchemaI): Rule {
   return (tree: Tree, _context: SchematicContext) => cap_utilities.setupOptions(tree, _options);
 }
+
 function addModuleToImports(options: SchemaI): Rule {
   return (host: Tree) => {
     options.clConfiguration = 'Cloudinary';
@@ -62,20 +63,23 @@ function addModuleToImports(options: SchemaI): Rule {
               value: `${options.cloudName}`
             },
             {
+              name: 'api_key',
+              value: `${options.apiKey}`
+            },
+            {
+              name: 'api_secret',
+              value: `${options.apiSecret}`
+            },
+            {
               name: 'upload_preset',
               value: `${options.uploadPreset}`
             },
             {
               name: 'private_cdn',
               value: `${options.privateCdn}`
-            },
-            {
-              name: 'cname',
-              value: `${options.cName}`
             }
           ]
         }
-
       }]
     )
   }
