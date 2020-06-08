@@ -5,6 +5,11 @@
       "description": "A blank schematic.",
       "factory": "./cap-angular-schematic-cloudinary/index",
       "schema": "./cap-angular-schematic-cloudinary/schema.json"
+    },
+    "ng-add": {
+      "description": "A blank schematic.",
+      "factory": "./ng-add/index",
+      "schema": "./ccap-angular-schematic-cloudinary/schema.json"
     }
   }
 }

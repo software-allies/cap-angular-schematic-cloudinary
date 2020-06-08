@@ -1,28 +1,29 @@
-# Getting Started With Schematics
+ # Cap Angular Schematic Cloudinary
 
-This repository is a basic Schematic implementation that serves as a starting point to create and publish Schematics to NPM.
+ Cap Angular Schematic Cloudinary is a schematic that install the __Cloudinary SDK__ into an Angular project. 
 
-### Testing
+ ### Installation
+ ```
+  ng add cap-angular-schematic-cloudinary
+ ```
 
-To test locally, install `@angular-devkit/schematics-cli` globally and use the `schematics` command line tool. That tool acts the same as the `generate` command of the Angular CLI, but also has a debug mode.
+### Functionality
 
-Check the documentation with
-```bash
-schematics --help
+The Schematic modifies the app module to embed the cloudinary' setting
+
+Example: 
+
+```
+imports: [
+    BrowserModule,
+    CloudinaryModule.forRoot(Cloudinary, {
+      cloud_name: 'my-cloud-name',
+      api_key: 'my-api-key',
+      api_secret: 'my-api-secret',
+      upload_preset: 'my-upload-preset',
+    })
+  ],
+
 ```
 
-### Unit Testing
-
-`npm run test` will run the unit tests, using Jasmine as a runner and test framework.
-
-### Publishing
-
-To publish, simply do:
-
-```bash
-npm run build
-npm publish
-```
-
-That's it!
- # cap-angular-schematic-cloudinary
+To know more about Cloudinary see the official [documentation](https://cloudinary.com/documentation/angular_integration#overview).
