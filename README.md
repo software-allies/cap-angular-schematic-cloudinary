@@ -11,7 +11,8 @@
 
 The Schematic modifies the app module to embed the cloudinary' setting.
 
-
+Inline-style: 
+![alt text]( "Cloudinary schematic")
 
 Example: 
 
