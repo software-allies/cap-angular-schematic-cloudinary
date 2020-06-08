@@ -9,7 +9,9 @@
 
 ### Functionality
 
-The Schematic modifies the app module to embed the cloudinary' setting
+The Schematic modifies the app module to embed the cloudinary' setting.
+
+
 
 Example: 
 

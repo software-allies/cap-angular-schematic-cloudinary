@@ -9,7 +9,7 @@
     "ng-add": {
       "description": "A blank schematic.",
       "factory": "./ng-add/index",
-      "schema": "./ccap-angular-schematic-cloudinary/schema.json"
+      "schema": "./cap-angular-schematic-cloudinary/schema.json"
     }
   }
 }
