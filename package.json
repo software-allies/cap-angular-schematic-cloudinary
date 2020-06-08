@@ -1,15 +1,20 @@
 {
   "name": "cap-angular-schematic-cloudinary",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A blank schematics",
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "test": "npm run build && jasmine src/**/*_spec.js"
   },
   "keywords": [
-    "schematics"
+    "Cloudinary",
+    "Schematics",
+    "Angular"
   ],
-  "author": "",
+  "author": {
+    "name": "Software Allies",
+    "url": "https://github.com/software-allies/cap-angular-schematic-cloudinary"
+  },
   "license": "MIT",
   "schematics": "./src/collection.json",
   "dependencies": {
