@@ -4,7 +4,7 @@ import {
   chain,
   SchematicContext
 } from '@angular-devkit/schematics';
-import * as cap_utilities from '../../../../cap-utilities/dist/index';
+import * as cap_utilities from 'cap-utilities';
 import { NodeDependencyType } from 'schematics-utilities';
 import { NodePackageInstallTask } from '@angular-devkit/schematics/tasks';
 
